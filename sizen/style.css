@@ -1,0 +1,65 @@
+@charset "UTF-8";
+html {
+  font-size: 100%;
+}
+body {
+  color: #383e45;
+  font-size: 0.9rem;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+.site-title {
+  width: 120px;
+  line-height: 1px;
+  padding: 10px 0;
+}
+.site-title a {
+  display: block;
+}
+.section-title {
+  display: inline-block;
+  font-size: 2rem;
+  margin-bottom: 60px;
+  border-bottom: solid 1px #383e45;
+}
+.content-title {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+.wrapper {
+    /* 画面が960px以下も自動的にアジャストする */
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0.4%;
+    text-align: center;
+}
+h2 {
+    /* インラインブロック要素にすることで、下線がテキストの幅に合わせて引かれるようになる */
+    display: inline-block;
+    border-bottom: #383e45 solid 1px;
+     margin-bottom: 60px;
+}
+
+
+
+/* footer */
+#footer {
+  font-size: 0.5rem;
+  padding: 10px 0;
+  text-align: center;
+}
+
+
+/* --------
+pc用
+----------*/ 
+@media screen and (min-width: 769px) {
+
+}
