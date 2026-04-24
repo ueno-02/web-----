@@ -1,9 +1,17 @@
 @charset "UTF-8";
+
+:root {
+  --main-color: #e1d0d0;
+  --sub-color: #f9f1ea;
+  --accent-color: #9ca0c5;
+  --text-color: #383e45;
+}
 html {
   font-size: 100%;
+  background-color: var(--main-color);
 }
 body {
-  color: #383e45;
+  color: var(--text-color);
   font-size: 0.9rem;
   display: flex;
   flex-flow: column;
@@ -70,16 +78,21 @@ h2 {
 
 /* ヘッダーナビ */
 .top-nav {
+  position:sticky;
+  top: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #99AD7A;
+  background-color: transparent;
   /* background: linear-gradient(to left, #f46b45, #eea849); */
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: #FFF;
+  color: var(--text-color);
+  background-color: rgba(156, 160, 197, 0.6);
   height: 50px;
   padding: 1em;
+  backdrop-filter: blur(5px);
+  z-index: 1000;
 }
 
 .menu {
@@ -93,6 +106,10 @@ h2 {
 .menu > li {
   margin: 0 1rem;
   overflow: hidden;
+}
+
+.menu a {
+  color: var(--sub-color);
 }
 
 .menu-button-container {
@@ -145,6 +162,44 @@ h2 {
   transform: rotate(-405deg);
 }
 
+/* ヘッダー画像とテキスト */
+
+.head-img {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head-img h1 {
+  color: var(--text-color);
+  font-size: 2rem;
+}
+
+.head-img img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 0.8 / 1;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 50% 50% 0 0;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: calc(100vh - 100px);
+}
+
+.head-img p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -15%);
+  color: var(--sub-color);
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
 /* aboutページ */
 .about-text {
   display: flex;
@@ -161,7 +216,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100px;
+  width: 70px;
   height: auto;
 }
 /* --------
