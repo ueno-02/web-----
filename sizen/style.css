@@ -156,6 +156,14 @@ h2 {
   width: 100%;
   align-items: right;
 }
+
+.about-content img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100px;
+  height: auto;
+}
 /* --------
 pc用
 ----------*/ 
