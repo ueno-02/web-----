@@ -83,17 +83,17 @@ h2 {
   color: var(--text-color);
   font-size: 2rem;
   margin-top: 10px;
+  text-align: center;
 }
 
 .head-img img {
-  /* display: block; */ 
-  width: 90%;
-  /* aspect-ratio: 0.8 / 1; */
+  width: 80%;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  border-radius: 50% 50% 0 0;
+  border-radius: 42% 42% 0 0;
   align-items: center;
   margin: 10px auto;
-  height: calc(100vh - 96px);
+  /* height: calc(100vh - 96px); */
 }
 
 .head-img p {
@@ -107,28 +107,77 @@ h2 {
   text-align: center;
 }
 
-/* aboutページ */
-.about-text {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
+.head-text-p {
+  display: none;
+}
+/* 
+---------------------------------
+aboutページ
+---------------------------------
+*/
+.content-title {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.5rem;
+  word-break: keep-all;
 }
 
-.about-text img {
-  /* width: 100%; */
-  align-items: right;
+.about-content h2 {
+  border-bottom: none;
+  font-size: 1rem;
+  margin: 0 auto 15px auto;
 }
 
 .about-content img {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 70px;
-  height: auto;
+  align-items: center;
+  margin: 0 auto;
+  width: 50px;
 }
 
+.about-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  margin: 0 10px;
+}
+
+.about-text img {
+  align-items: right;
+}
+
+/* 
+---------------------------------
+リンク共有クラス
+---------------------------------
+ */
+.button-link {
+  text-decoration: none;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+.text-indent {
+  margin-bottom: 15px;
+}
+
+
+/* 
+---------------------------------
+メニュー
+---------------------------------
+ */
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 /* ---------
-ヘッダー要素
+ヘッダー要素 外部css引用
 ----------*/
 
 .header-content ol {
@@ -226,68 +275,6 @@ h2 {
   transform: rotate(-405deg);
 }
 
-/*
----------------------------------
-ヘッダー画像とテキスト
----------------------------------
-*/
-
-.head-img {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.head-img h1 {
-  color: var(--text-color);
-  font-size: 2rem;
-  margin-top: 10px;
-}
-
-.head-img img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 0.8 / 1;
-  overflow: hidden;
-  object-fit: cover;
-  border-radius: 50% 50% 0 0;
-  max-width: 800px;
-  margin: 0 auto;
-  margin-top: 10px;
-  height: calc(100vh - 100px);
-}
-
-.head-img p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -15%);
-  color: var(--sub-color);
-  font-size: 1.2rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-
-/* aboutページ */
-.about-text {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-.about-text img {
-  width: 100%;
-  align-items: right;
-}
-
-.about-content img {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 70px;
-  height: auto;
-}
 /* --------
 pc用
 ----------*/ 
@@ -320,7 +307,7 @@ pc用
   }
 
   #menu-toggle:checked ~ .menu li {
-    border: 1px solid #333;
+    border: 1px solid var(--sub-color);
     height: 2.5em;
     padding: 0.5em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -333,7 +320,7 @@ pc用
     padding: 0.5em 0;
     width: 100%;
     color: white;
-    background-color: #222;
+    background-color: var(--accent-color);
   }
 
   .menu > li:not(:last-child) {
