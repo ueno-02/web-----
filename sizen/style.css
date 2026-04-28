@@ -65,6 +65,21 @@ h2 {
   text-align: center;
 }
 
+/* 
+---------------------------------
+リンク共有クラス
+---------------------------------
+ */
+.button-link {
+  text-decoration: none;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+.text-indent {
+  margin-bottom: 15px;
+}
+
 
 /*
 ---------------------------------
@@ -86,15 +101,18 @@ h2 {
   text-align: center;
 }
 
-/* .head-img img {
-  width: 80%;
-  aspect-ratio: 4 / 5;
+.head-img img {
+  width: 100%;
+  max-width: 768px;
+  /* aspect-ratio: 4 / 5; */
   object-fit: cover;
-  border-radius: 42% 42% 0 0;
+  /* border-radius: 42% 42% 0 0; */
   align-items: center;
-  margin: 10px auto;
-  /* height: calc(100vh - 96px); */
-/* }  */
+  /* margin: 10px auto; */
+  height: calc(100vh - 0px);
+  z-index: 500;
+  margin: -50px;
+}
 
 .head-img p {
   position: absolute;
@@ -110,6 +128,8 @@ h2 {
 .head-text-p {
   display: none;
 }
+
+
 /* 
 ---------------------------------
 aboutページ
@@ -120,6 +140,7 @@ aboutページ
   margin-top: 30px;
   font-size: 1.5rem;
   word-break: keep-all;
+  margin-top: 80px;
 }
 
 .about-content h2 {
@@ -146,21 +167,6 @@ aboutページ
 
 .about-text img {
   align-items: right;
-}
-
-/* 
----------------------------------
-リンク共有クラス
----------------------------------
- */
-.button-link {
-  text-decoration: none;
-  text-align: center;
-  color: var(--accent-color);
-}
-
-.text-indent {
-  margin-bottom: 15px;
 }
 
 
@@ -201,10 +207,10 @@ aboutページ
   /* background: linear-gradient(to left, #f46b45, #eea849); */
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: var(--text-color);
-  background-color: rgba(156, 160, 197, 0.6);
+  background-color: linear-gradient(to top, black, #aaa);
   height: 50px;
   padding: 1em;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   z-index: 1000;
 }
 
