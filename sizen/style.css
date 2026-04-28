@@ -86,7 +86,7 @@ h2 {
   text-align: center;
 }
 
-.head-img img {
+/* .head-img img {
   width: 80%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
@@ -94,7 +94,7 @@ h2 {
   align-items: center;
   margin: 10px auto;
   /* height: calc(100vh - 96px); */
-}
+/* }  */
 
 .head-img p {
   position: absolute;
