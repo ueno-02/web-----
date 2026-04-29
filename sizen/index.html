@@ -9,6 +9,8 @@
     <link rel="icon" href="img/favicon.ico">
     <!-- リセットCSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"> -->
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
     <link rel="stylesheet" href="style.css">
     <title>レストランsizen(ビュッフェ)</title>
 </head>
@@ -22,8 +24,8 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#menu">Menu</a></li>
                         <li><a href="#access">Access</a></li>
-                        <li><a href="#">Farmer</a></li>
-                        <li><a href="#">Review</a></li>
+                        <li><a href="#farmer">Producer</a></li>
+                        <li><a href="#sub">Review</a></li>
                         <li><a href="#">Blog</a></li>
                     </ol>
                 </nav>
@@ -35,7 +37,7 @@
         </section> -->
         <section class="top-nav">
             <div>
-                Logo Here
+                <img src="img/foot_logo.png" alt="レストランsizenのロゴ">
             </div>
             <input id="menu-toggle" type="checkbox" />
             <label class='menu-button-container' for="menu-toggle">
@@ -50,173 +52,301 @@
                 <li><a href="#">Blog</a></li>
             </ul>
         </section>
-    <div class="head-img">
-                <h1>レストランsizen</h1>
-                <img src="img/heiwadai (1).jpg" alt="レストランsizenの入り口">
-                <p>人にも自然にも優しいオーガニックレストラン</p>
-                <p class="head-text-p">宮崎の豊かな森と、信念を持つ農家たちが育てた<br>「本物の命」を味わうレストラン。</p>
-            </div>
     </header>
-
-    <main class="wrapper main">
+    <main class="main">
+        <!-- 見出し画像 -->
+        <div class="head-img">
+            <video src="video/videoproject.mp4" autoplay muted loop playsinline></video>
+            <div class="logo-head">
+                <img src="img/foot_logo.png" alt="レストランsizenのロゴ">
+                <p class="head-img-1 text-deco">人にも自然にも優しい<br>オーガニックレストラン</p>
+                <p class="head-img-p2 text-deco">宮崎の豊かな森と、信念を持つ農家たちが育てた<br>「本物の命」を味わうレストラン。</p>
+            </div>
+    <!-- aboutページ -->
         <section id="about">
             <div class="about-content">
-                <h1 class="content-title">レストランsizen<wbr />について</h1>
-                <img src="img/seeds.png" alt=桜の種のイラスト">
-                <h2 class="text-indent">レストランsizenができるまで</h2>
+                <img src="img/te5.png" alt="桜の種のイラスト">
+                <h2 class="text-deco">レストランsizenができるまで</h2>
                 <section id="about-text">
-                    <div class="about-text">
-                        <p>宮崎の農家さんが、泥にまみれ、わが子のように育てた無農薬野菜。<br>
-                            その「本当の価値」を多くの人に届けたい。<br>
-                            そんな強い想いが、sizenのすべての始まりです。</p>
-                        <img src="img/about1.png" alt="桜の芽のイラスト">
-                        <p>選んだ場所は、静寂に包まれた緑豊かな森。<br>
-                            自然のエネルギーに満ちたこの場所で、<br>
-                            農家さんが命を吹き込んだ食材を、その物語とともに味わってください。</p>
-                        <img src="img/kusunoki.png" alt="桜の木のイラスト">
-                        <p>化学調味料は一切使いません。<br>
-                            20種類の料理と、一杯ずつ淹れる自家製の薬草茶。<br>
-                            「ああ、生きてるっていいな」<br>
-                            翌朝、体の軽さに気づいたとき、あなたは本当の自然を知るはずです。
-                        </p>
-                        <img src="img/sakura.png" alt="桜のイラスト">
-                    <div class="about-button">
-                        <a class="button-link" href="#">
-                            <h3>詳細を見る</h3>
-                        </a>
+                        <div class="about-text text-deco">
+                            <p>宮崎の農家さんが、泥にまみれ、わが子のように育てた無農薬野菜。<br>
+                                その「本当の価値」を多くの人に届けたい。<br>
+                                そんな強い想いが、sizenのすべての始まりです。</p>
+                            <p>選んだ場所は、静寂に包まれた緑豊かな森。<br>
+                                自然のエネルギーに満ちたこの場所で、<br>
+                                農家さんが命を吹き込んだ食材を、その物語とともに味わってください。</p>
+                            <p>化学調味料は一切使いません。<br>
+                                20種類の料理と、一杯ずつ淹れる自家製の薬草茶。<br>
+                                「ああ、生きてるっていいな」<br>
+                                翌朝、体の軽さに気づいたとき、あなたは本当の自然を知るはずです。
+                            </p>
+                            <div class="about-button">
+                                <a class="button-link" href="#">
+                                    <h3>詳細を見る</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+            </div>
+        </section>
+        <div class="menu-gradient"></div>
+        <section id="menu" class="full-bg">
+            <div class="wrapper">
+                <div class="menu-content">
+                    <h1 class="content-title">メニュー</h1>
+                    <p class="text-deco">科学調味料・添加物は使用しない<br>有機・無農薬の食材が中心のオーガニック料理</p>
+                    <section id="menu-item">
+                        <div class="menu-item">
+                            <img src="img/menu1.png" alt="豚肉とズッキーニのトマトソーススパゲティ">
+                            <p>豚肉の甘さと、ズッキーニのさっぱりとした食感が絶妙なバランスをとっています。</p>
+                            <img src="img/menu2.png" alt="天然酵母ピザ">
+                            <p>天然酵母の手ごね生地と特製ピザソースで作りました。</p>
+                            <img src="img/menu3.png" alt="新玉ねぎのグリル">
+                            <p>新玉ねぎをじっくりと焼くことで、あまさが際立つおいしさです。</p>
+                            <img src="img/menu4.png" alt="レタス巻き">
+                            <p>宮崎市跡江の松本さんのオーガニック米です。</p>
+                            <img src="img/menu5.png" alt="sizenのポテトサラダ">
+                            <p>手づくりマヨネーズでとってもおいしいです。</p>
+                        </div>
+                        <div class="menu2-button">
+                            <a class="button-link" href="#">
+                                <h3>メニューを見る</h3>
+                            </a>
+                        </div>
+
+                        <div class="wrapper shop-content">
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <img src="img/item5-2.jpg" alt="手作り油みそ">
+                                </div>
+                                <div class="review-body">
+                                    <h3>手作り油みそ　4種類</h3>
+                                    <p>昔ながらの製法で焦げ付かないように<wbr />じっくりとかき混ぜて煮詰めた手づくりみそです。</p>
+                                    <p>値段：<strong>230g〜250g　500円（税別）</strong></p>
+                                    <a class="button-link" href="#">
+                                        <h3>詳細を見る</h3>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <img src="img/d-2.jpg" alt="生ドレッシング">
+                                </div>
+                                <div class="review-body">
+                                    <h3>生ドレッシング　7種類</h3>
+                                    <p>新鮮な野菜とフレッシュなハーブを<wbr />使用したドレッシングです。</p>
+                                    <p>値段：<strong>100g　600円（税別）</strong></p>
+                                    <a class="button-link" href="#">
+                                        <h3>詳細を見る</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
+        </div>
         </section>
-        <section id="menu">
-            <div class="menu-content">
-                <h1 class="content-title">メニュー</h1>
-                <p class="text-indent">科学調味料・添加物は使用しない<br>有機・無農薬の食材が中心のオーガニック料理</p>
-                <section id="menu-item">
-                    <div class="menu-item">
-                        <img src="img/menu1.png" alt="豚肉とズッキーニのトマトソーススパゲティ">
-                        <p>豚肉の甘さと、ズッキーニのさっぱりとした食感が絶妙なバランスをとっています。</p>
-                        <img src="img/menu2.png" alt="天然酵母ピザ">
-                        <p>天然酵母の手ごね生地と特製ピザソースで作りました。</p>
-                        <img src="img/menu3.png" alt="新玉ねぎのグリル">
-                        <p>新玉ねぎをじっくりと焼くことで、あまさが際立つおいしさです。</p>
-                        <img src="img/menu4.png" alt="レタス巻き">
-                        <p>宮崎市跡江の松本さんのオーガニック米です。</p>
-                        <img src="img/menu5.png" alt="sizenのポテトサラダ">
-                        <p>手づくりマヨネーズでとってもおいしいです。</p>
+        <section id="access" class="access-section">
+            <div class="wrapper">
+                <!-- マップエリア：アーチ形状 -->
+                 <div class="access-content content-title">
+                    <h1>アクセス</h1>
+                 </div>
+                <div class="access-map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3385.5114780477934!2d131.41596389999998!3d31.947018099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3538b0c55b540793%3A0x53c903ddf4ddccae!2z44Kq44O844Ks44OL44OD44Kv44Os44K544OI44Op44OzIHNpemVu!5e0!3m2!1sja!2sjp!4v1776831683433!5m2!1sja!2sjp"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <div class="access-info-area">
+                    <h2 class="store-name">オーガニックレストラン sizen</h2>
+                    <address class="store-address">
+                        〒880-0035 宮崎県宮崎市下北方町越下155-3（平和台公園内）
+                    </address>
+
+                    <!-- 営業時間・料金情報 -->
+                    <div class="info-grid">
+                        <!-- 平日ランチ -->
+                        <div class="info-row">
+                            <span class="badge-circle">平日</span>
+                            <div class="info-details">
+                                <p class="time">11:00 〜 15:00 <small>(ランチビュッフェ)</small></p>
+                                <p class="price-summary">大人 ¥2,400 / シルバー ¥2,100 / 子ども ¥1,300</p>
+                            </div>
+                        </div>
+
+                        <!-- 土日祝ランチ -->
+                        <div class="info-row">
+                            <span class="badge-circle">休日</span>
+                            <div class="info-details">
+                                <p class="time">11:00 〜 15:00 <small>(ランチビュッフェ)</small></p>
+                                <p class="price-summary">大人 ¥2,500 / シルバー ¥2,200 / 子ども ¥1,500</p>
+                            </div>
+                            <!-- 右側のフローティングバッジ -->
+                            <div class="side-badges">
+                                <span class="badge-oval">定休日：<wbr />なし</span>
+                            </div>
+                        </div>
+
+                        <!-- ディナー・その他 -->
+                        <div class="info-row">
+                            <span class="badge-circle">夜</span>
+                            <div class="info-details">
+                                <p class="time">土曜のみ営業 <small>※価格はランチと同様</small></p>
+                                <p class="note">※月曜祝日の場合は日曜夜も営業いたします。</p>
+                            </div>
+                            <div class="side-badges">
+                                <a href="tel:0985313693" class="badge-oval accent">電話</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu2-button">
-                        <h3><a href="#">メニューを見る</a></h3>
+
+                    <div class="tel-display">
+                        <a href="tel:0985313693">0985-31-3693</a>
                     </div>
-                    <div class="shop-content">
-                        <img src="#" alt="商品">
-                        <p>商品の説明</p>
-                        <p>価格</p>
-                        <a href="#">詳細を見る</a>
-                        <img src="#" alt="商品">
-                        <p>商品の説明</p>
-                        <p>価格</p>
-                        <a href="#">詳細を見る</a>
+
+                    <div class="access-cta">
+                        <a href="https://epark.jp/shopinfo/jsp658491/" class="btn-reservation">お席の受付はこちらから</a>
                     </div>
-                </section>
+                </div>
             </div>
         </section>
-        <section id="access">
-            <div class="access-content">
-                <h1 class="content-title">アクセス</h1>
-                <p>交通アクセス</p>
-                <section id="access-map">
-                    <div class="access-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3385.5114780477934!2d131.41596389999998!3d31.947018099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3538b0c55b540793%3A0x53c903ddf4ddccae!2z44Kq44O844Ks44OL44OD44Kv44Os44K544OI44Op44OzIHNpemVu!5e0!3m2!1sja!2sjp!4v1776831683433!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <th>平日</th>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td colspan="2"></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td colspan="2"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+        <section id="farmer" class="full-bg access-section">
+            <div class="wrapper">
+                <div class="farmer-content menu-content">
+                    <h1 class="content-title">生産者</h1>
+ <div class="access-info-area">
+            <!-- 生産者1 -->
+            <div class="info-row farmer-figure">
+                
+                    <div class="badge-circle">
+                        <img src="img/p1.png" alt="大地園">
                     </div>
-                    <div class="access-event">
-                        <h1>カレンダー</h1>
-                        <img src="#" alt="カレンダー">
+                    <div class="text-indent">
+                        <div class="info-details">
+                            <p class="time">株式会社 大地園</p>
+                            <p class="price-summary">宮崎県児湯郡川南町 / 有機JAS認証茶</p>
+                        </div>
+                        <div class="side-badges">
+                            <span class="badge-oval">お茶</span>
+                        </div>
                     </div>
-                    <div class="access-button">
-                        <a href="#">
-                            <h3>イベントを見る</h3>
-                        </a>
-                    </div>
-                </section>
+                </div>
             </div>
-        </section>
-        <section id="farmer">
-            <div class="farmer-content">
-                <h1 class="content-title">生産者</h1>
-                <p>テキスト</p>
-                <div>
-                    <img src="img/p1.png" alt="株式会社　大地園">
-                    <p>群農園</p>
+
+            <!-- 生産者2 -->
+            <div class="info-row farmer-figure">
+                <div class="badge-circle">
                     <img src="img/p2.png" alt="広瀬農園">
-                    <p>広瀬農園</p>
+                </div>
+                <div class="text-indent">
+                    <div class="info-details">
+                        <p class="time">広瀬農園</p>
+                        <p class="price-summary">宮崎県綾町 / 無農薬野菜</p>
+                    </div>
+                    <div class="side-badges">
+                        <span class="badge-oval">野菜</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 生産者3 -->
+            <div class="info-row farmer-figure">
+                <div class="badge-circle">
                     <img src="img/p3.png" alt="群農園">
-                    <p>群農園</p>
                 </div>
-                <div class="farmer-button">
-                    <a href="#">
-                        <h3>生産者一覧を見る</h3>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <section id="sub">
-            <div class="sub-content">
-                <h1 class="content-title">お客様の声</h1>
-                <div class="review-content">
-                    <img src="img/sp-r1-2.png" alt="お客様の声">
-                    <p>レビューの説明文</p>
-                </div>
-                <div class="review-button">
-                    <a href="#">
-                        <h3>お客様の声を見る</h3>
-                    </a>
-                </div>
-                <h1 class="content-title">ブログ</h1>
-                <div class="blog-content">
-                    <a href="#">
-                        <img src="#" alt="Blog画像">
-                        <time datetime="2026-04-20">2026年4月20日</time>
-                        <h4>ブログタイトル</h4>
-                        <p>Blogの説明文</p>
-                    </a>
-                </div>
-                <div class="blog-button">
-                    <a href="#">
-                        <h3>ブログを見る</h3>
-                    </a>
+                <div class="text-indent">
+                    <div class="info-details">
+                        <p class="time">群農園</p>
+                        <p class="price-summary">宮崎県綾町 / 自然農法米</p>
+                    </div>
+                    <div class="side-badges">
+                        <span class="badge-oval">お米</span>
+                    </div>
                 </div>
             </div>
+
+            <div class="access-cta">
+                <a href="#" class="btn-reservation">すべての生産者を見る</a>
+            </div>                </div>
+            </div>
         </section>
+<section id="sub" class="full-bg access-section">
+    <div class="wrapper">
+            <h1 class="content-title">お客さまの声</h1>
+                        <div class="review-card">
+                            <div class="review-image">
+                                <img src="img/anketo1.png" alt="アンケート1">
+                            </div>
+                            <div class="review-body">
+                                <span class="badge-oval">宮崎市 星野さま</span>
+                                <h3>すごくおいしかったです!!</h3>
+                                <p>「ばあちゃんに誘われて来ました。接客が大変よかった。特に里芋のチーズ焼きがおいしい！」</p>
+                            </div>
+                        </div>
+                    <!-- スライド2 -->
+                        <div class="review-card">
+                            <div class="review-image">
+                                <img src="img/anketo2.png" alt="アンケート2">
+                            </div>
+                            <div class="review-body">
+                                <span class="badge-oval">戸路さま</span>
+                                <h3>sizenのファンだからです</h3>
+                                <p>「料理・見た目・タイミング、どれもパーフェクト。パンを販売してほしいほどです。」</p>
+                            </div>
+                        </div>                    <!-- スライド3 -->
+                        <div class="review-card">
+                            <div class="review-image">
+                                <img src="img/anketo3.png" alt="アンケート3">
+                            </div>
+                            <div class="review-body">
+                                <span class="badge-oval">久保田さま</span>
+                                <h3>気持ちよく食事ができました</h3>
+                                <p>「ハッシュドチキンがおいしかった。笑顔で対応してくださり大満足です。」</p>
+                            </div>
+                        </div>
+                </div>
+
+        <div class="access-cta">
+            <a href="#" class="btn-reservation">もっと見る</a>
+        </div>
+    </div>
+    <h1 class="content-title">ブログ</h1>
+    <div class="blog-content cstm-box-offset">
+        <div class="blog-card">
+            <h3 class="t_bg1 mb15"><a href="https://sizen-organic.com/archives/937" title="祝！20歳になりました"> 祝！20歳になりました</a>
+            </h3>
+            <p class="mb15 text_r">『 2025年10月2日 』</p>
+            <p class="blog-card__excerpt">
+                2005年10月1日、20年前の今日、僕たちのお店は産声をあげました。<br>
+                実は、20年前の平和台公園は今では面影もないくらい廃れてたんです。<wbr />
+                複数の方から"あんな所でレストランなんかやめておいた方がいい"とアドバイスを頂いた場所。<wbr />
+                そんな場所で運営していた赤字続きの公的機関の運営撤退から民間へバトンタッチされた店舗が、<wbr />"オーガニックレストランsizen"
+                でした。.....
+            </p>
+            <p class="text_r"><a class="more-link ml20" href="https://sizen-organic.com/archives/937">&raquo; 続きを読む</a></p>
+        </div>
+            </div class="access-cta">
+                    <a href="#">
+                        <h3 class="btn-reservation">ブログを見る</h3>
+                    </a>
+            </div>
+        </section>
+        <div class="menu-gradient menu-gradient-bottom"></div>
     </main>
     <footer class="wrapper footer">
         <section id="footer">
             <div class="footer-content">
                 <p>© 2025 SIZEN. All rights reserved.</p>
-            </div>
+                </div>
+            
         </section>
     </footer>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->
+    <script src="js/script.js"></script>
 </body>
 </html>
