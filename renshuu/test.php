@@ -1,3 +1,6 @@
+            <video src="video/videoproject.mp4" autoplay muted loop playsinline></video>
+
+
 <?php 
 $Hello = 'Hello,World!';
 
