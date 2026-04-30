@@ -114,6 +114,13 @@ h2 {
   font-size: 1.5rem;
 }
 
+.full-bg {
+  width: 100%;
+  background-color: var(--textsub-color);
+  position: relative;
+  z-index: 1;
+}
+
 
 /*
 ---------------------------------
@@ -126,6 +133,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .head-img video {
@@ -151,14 +159,31 @@ h2 {
 }
 
 .head-img-1 {
-  margin: 10px 0 400px 0;
   font-size: 1rem;
   text-align: center;
+  word-break: break-all;
   /* z-index: 100; */
 }
 
 .head-img-p2 {
   display: none;
+}
+
+.logo-head {
+  position: relative;
+  z-index: 10;
+  text-align: center; 
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+
+.logo-head img {
+  width: 180px;
+  height: auto;
+  margin: 300px auto 20px;
+  display: block;
 }
 
 
@@ -208,12 +233,6 @@ aboutページ
 メニュー
 ---------------------------------
  */
-.full-bg {
-  width: 100%;
-  background-color: var(--textsub-color);
-  position: relative;
-  z-index: 1;
-}
 
 .menu-content {
   display: flex;
@@ -438,7 +457,7 @@ aboutページ
     display: block;
     width: 100%;
     max-width: fit-content;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 18px;
     border: 1px solid #d4a373; 
     color: #d4a373;
@@ -464,8 +483,6 @@ aboutページ
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40px; /* 生産者ごとの間隔を広げる */
-  padding-bottom: 100px;
 }
 
 .text-indent {
@@ -686,6 +703,44 @@ aboutページ
   transform: rotate(-405deg);
 }
 
+  /* 
+  -------------------
+  footerページ
+  
+  -------------------
+  */
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.footer-content p {
+  color: var(--textsub-color);
+  font-size: 0.9rem;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.sns-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+.sns-icon-link img{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+.sns-icon-link:hover img{
+  opacity: 0.7;
+}
+
 
 /* =============================================
    タブレット・中画面スマホ用 (600px以上)
@@ -694,19 +749,22 @@ aboutページ
   /* 全体のコンテナ幅を制限して読みやすくする */
   .wrapper {
     max-width: 720px;
-    padding: 0 40px;
+    /* padding: 0 40px; */
+  }
+
+  .br {
+    display: none;
   }
 
   /* Aboutセクションのテキスト幅を絞る */
   .about-text p {
-    max-width: 600px;
+    /* max-width: 600px; */
     margin: 40px auto;
   }
 
   .menu-item {
     display: grid;
-    grid-template-columns: repeat(3, 3fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 2fr);
   }
 
   .shop-content {
@@ -716,13 +774,11 @@ aboutページ
     text-align: left;
   }
 
-  /* グリッドにした際に見出しが1列を占領するように調整 */
   .content-title, .store-name, .access-cta, .btn-reservation {
     grid-column: 1 / -1; /* 横一杯 */
     text-align: center;
   }
 
-  /* 生産者リストを2列にする */
   .farmer-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -741,10 +797,28 @@ aboutページ
   .cstm-box-offset {
     max-width: 600px;
   }
+
+  .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px;
+  width: 100%;
+  height: 500px;
 }
-/* =============================================
-   PC用 (960px以上) - 既存のものを微調整
-   ============================================= */
+
+.item-1 { grid-area: 1 / 1 / 2 / 2; }
+.item-2 { grid-area: 1 / 2 / 2 / 3; }
+.item-3 { grid-area: 1 / 3 / 2 / 4; }
+.item-4 { grid-area: 2 / 1 / 3 / 2; }
+.item-5 { grid-area: 2 / 2 / 3 / 3; }
+.item-6 { grid-area: 2 / 3 / 3 / 4; }
+}
+/* 
+-------------------------------------
+   PC用 (960px以上) 
+-------------------------------------
+   */
 @media screen and (min-width: 960px) {
   .wrapper {
     max-width: 960px;
@@ -761,17 +835,24 @@ aboutページ
     letter-spacing: 0.1em;
   }
 
-  /* 3. Aboutセクション：左右非対称のラグジュアリー配置 */
   .about-text {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    text-align: left; /* PCでは左寄せが基本 */
+    text-align: left; 
   }
 
   .about-text p {
-    max-width: 100%; /* スマホ用の制限を解除 */
     margin: 0;
     font-size: 1.2rem;
+    padding-bottom: 200px;
   }
+
+  .about-content {
+    margin: 500px auto 0 auto ;
+  }
+
+
 
   /* 4. メニュー/ショップ：多カラム化による一覧性の向上 */
   .menu-item {
@@ -784,17 +865,22 @@ aboutページ
   /* ブログカードの横長化 */
   .cstm-box-offset {
     max-width: 1000px;
-    padding: 4em; /* 余白をふんだんに使う */
+    padding: 4em; 
   }
 
   .text-deco {
-    max-width: 800px; /* 読みやすい広がりへ拡張 */
+    max-width: 800px; 
     font-size: 1.1rem;
   }
 
-  /* 6. 特殊：ヒーローエリアのテキスト配置 */
+  
   .logo-head {
-    transform: scale(1.2); /* PCではロゴとコピーを強調 */
+    transform: scale(1.2);
+  }
+
+  .logo-head img {
+    margin-top: 400px;
+    width: 300px;
   }
 }
 
