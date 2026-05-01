@@ -12,10 +12,33 @@
   --text-color: #383e45;
   --textsub-color: #fff;
   --bg-color: #d4a373;
+
+  --font-family: 'Zen Kaku Gothic New', sans-serif;
+  --font-family-secondary: 'IBM Plex Sans', sans-serif;
+}
+
+.zen-kaku-gothic-new-regular {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.ibm-plex-sans-regular {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 html {
   font-size: 100%;
-  background-color: var(--main-color);
+  /* background-color: var(--main-color); */
+    background-image: url('img/hatake.jpg');
+  background-size: cover;
+  background-position: center;
+
 }
 body {
   color: var(--text-color);
@@ -23,13 +46,15 @@ body {
   display: flex;
   flex-flow: column;
   overflow-x: hidden;
+  font-family: var(--font-family);
 }
 
+
 html, body {
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  position: relative !important;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 a {
@@ -41,6 +66,9 @@ img {
 }
 li {
   list-style: none;
+}
+h1 {
+  font-size: 2rem;
 }
 .site-title {
   width: 120px;
@@ -102,7 +130,7 @@ h2 {
   margin: 0 auto;
   max-width: 350px;
   color: var(--textsub-color);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   line-height: 2.5;
 }
 
@@ -170,10 +198,15 @@ h2 {
 }
 
 .logo-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   z-index: 10;
   text-align: center; 
   width: 100%;
+  height: 100vh;
   max-width: 800px;
   padding: 20px;
 }
@@ -181,11 +214,15 @@ h2 {
 
 .logo-head img {
   width: 180px;
-  height: auto;
   margin: 300px auto 20px;
   display: block;
 }
 
+.about-button .button-link h3 {
+  font-size: 1rem;
+  color: var(--textsub-color);
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
 
 /* 
 ---------------------------------
@@ -202,7 +239,7 @@ aboutページ
 
 .about-content h2 {
   border-bottom: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 0 auto 15px auto;
 }
 
@@ -309,6 +346,12 @@ aboutページ
 .shop-content h3 {
   padding-top: 20px;
 }
+
+.review-body .access-cta h3 {
+  margin: 0 auto;
+  color: var(--bg-color);
+  padding: 0;
+}
 /*
 ---------------------------------
 アクセス
@@ -325,23 +368,22 @@ aboutページ
 }
 
 .access-content h1 {
-  font-size: 1.5rem;
   color: var(--text-color);
 }
 
 .access-section {
-    background-color: #ffffff; /* 横一杯の白背景 */
+    background-color: #ffffff;
     padding: 80px 0;
     margin-bottom: -5px;
     color: var(--text-color);
     text-align: left;
 }
 
-/* マップのアーチ形状 */
+/* マップのアーチ */
 .access-map-container {
     width: 100%;
     aspect-ratio: 16 / 9;
-    border-radius: 60px 60px 0 0; /* 大きな角丸 */
+    border-radius: 60px 60px 0 0;
     overflow: hidden;
     margin-bottom: 40px;
 }
@@ -350,12 +392,12 @@ aboutページ
     width: 100%;
     height: 100%;
     border: none;
-    filter: grayscale(20%); /* ほんのりグレーで上質感を演出 */
+    filter: grayscale(20%); 
 }
 
 /* テキストエリア */
 .access-info-area {
-    max-width: 500px; /* 読みやすい幅に制限 */
+    max-width: 500px; 
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -520,6 +562,19 @@ aboutページ
     /* filter: brightness(0.9); */
 }
 
+.review-subpage {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-subpage img {
+  display: flex;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
 /* テキストエリア */
 .review-body {
     padding: 30px 20px;
@@ -536,7 +591,7 @@ aboutページ
     font-size: 1.1rem;
     margin-bottom: 15px;
     line-height: 1.4;
-    color: var(--text-color);
+    color: var(--accent-color);
 }
 
 .review-body p {
@@ -562,26 +617,26 @@ aboutページ
   display: flex;
   margin: 2em auto;
   width: calc(100% - 20px);
-  padding: 2em;  /* 内側余白 */
-  background: none;  /* 元のボックス背景色なし */
-  border: 1px solid #ccc;  /* 枠線 */
-  position: relative;  /* 配置の基準 */
+  padding: 2em;
+  background: none;
+  border: 1px solid #ccc;
+  position: relative;
   box-sizing: border-box;
 }
 
 .cstm-box-offset::after {
   position: absolute;
-  background-color: #eee;  /* ずらした背景色 */
-  border: none;  /* 枠線なし */
-  content: '';  /* 擬似要素 */
-  position: absolute;  /* 位置指定 */
-  top: 5px;  /* 上にずらす */
-  left: 5px;  /* 左にずらす */
+  background-color: #eee; 
+  border: none; 
+  content: ''; 
+  position: absolute; 
+  top: 5px; 
+  left: 5px; 
   right: 0;
   bottom: 0;
-  width: 100%;  /* 幅100% */
-  height: 100%;  /* 高さ100% */
-  z-index: -1;  /* 背面表示 */
+  width: 100%; 
+  height: 100%; 
+  z-index: -1; 
 }
 
 /* ボックス内の段落 */
@@ -631,6 +686,7 @@ aboutページ
   /* border-bottom: 0.5px solid var(--sub-color); */
   backdrop-filter: blur(5px);
   z-index: 1000;
+  font-family: var(--font-family-secondary);
 }
 
 .top-nav img {
@@ -741,12 +797,14 @@ aboutページ
   opacity: 0.7;
 }
 
+.t_bg1 a ,.text_r a {
+  color: var(--bg-color);
+}
 
 /* =============================================
    タブレット・中画面スマホ用 (600px以上)
    ============================================= */
 @media screen and (min-width: 600px) {
-  /* 全体のコンテナ幅を制限して読みやすくする */
   .wrapper {
     max-width: 720px;
     /* padding: 0 40px; */
@@ -788,7 +846,7 @@ aboutページ
   .farmer-figure {
     padding-bottom: 20px;
     border-bottom: none;
-    background: rgba(255,255,255,0.5); /* 軽く背景をつけるとカード感が出る */
+    background: rgba(255,255,255,0.5);
     border-radius: 15px;
     padding: 20px;
   }
@@ -825,12 +883,12 @@ aboutページ
   }
 
   body {
-    font-size: 1.1rem; /* 18px相当に引き上げ */
-    line-height: 2.0;  /* 行間を広げて可読性を担保 */
+    font-size: 1.1rem; 
+    line-height: 2.0; 
   }
 
   .content-title {
-    font-size: 2.5rem; /* 見出しを大胆に巨大化 */
+    font-size: 2rem; 
     margin: 120px 0 80px;
     letter-spacing: 0.1em;
   }
@@ -854,10 +912,10 @@ aboutページ
 
 
 
-  /* 4. メニュー/ショップ：多カラム化による一覧性の向上 */
+  /* 4. メニュー/ショップ： */
   .menu-item {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3列 */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 60px 40px;
   }
 
@@ -879,8 +937,8 @@ aboutページ
   }
 
   .logo-head img {
-    margin-top: 400px;
-    width: 300px;
+    margin-top: 300px;
+    width: 250px;
   }
 }
 

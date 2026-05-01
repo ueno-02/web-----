@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- googleが自動で生成してくれるため書いても反映されない。 -->
+    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
+    <!-- レスポンシブ対応するときは絶対にいる -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico">
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>レストランsizen(ビュッフェ)</title>
+</head>
+
+<body>
+    <!-- <header class="wrapper header">
+        <section id="header">
+            <div class="header-content">
+                <nav>
+                    <ol>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#access">Access</a></li>
+                        <li><a href="#farmer">Producer</a></li>
+                        <li><a href="#sub">Review</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="head-img">
+                <img src="img/header1.jpg" alt="レストランsizenの入り口">
+                <p>人にも自然にも優しいオーガニックレストラン<br>宮崎の豊かな森と、信念を持つ農家たちが育てた「本物の命」を味わうレストラン。</p>
+            </div>
+        </section> -->
+    <section class="top-nav">
+        <div>
+            <a href="index.html"><img src="img/foot_logo.png" alt="レストランsizenのロゴ"></a>
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="access.html">Access</a></li>
+            <li><a href="producer.html">Producer</a></li>
+            <li><a href="review.html">Review</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </section>
+    </header>
+    <main class="main">
+        <!-- aboutページ -->
+        <div class="menu-gradient"></div>
+        <section id="menu" class="full-bg">
+            <div class="wrapper">
+                <section id="sub" class="full-bg access-section">
+                    <div class="wrapper">
+                        <h1 class="content-title">お客さまの声</h1>
+                        <div class="review-card">
+                            <div class="review-image">
+                                <img src="img/633.jpg" alt="アンケート1">
+                            </div>
+
+                            <div class="review-body">
+                                <span class="badge-oval accent">宮崎市在住 室野さま</span>
+
+                                <h3>「すごくおいしかったです!!♥」</h3>
+
+                                <p>
+                                    <strong>【きっかけ】</strong><br>
+                                    ばあちゃんに誘われて来ました。
+                                </p>
+
+                                <p>
+                                    <strong>【スタッフの対応】</strong><br>
+                                    笑顔での対応が大変よかったです。料理の並ぶスピードが速いのも助かりました。
+                                </p>
+
+                                <p>
+                                    特に<strong>「えのき南蛮」</strong>と<strong>「里芋のチーズ焼き」</strong>が絶品でした！
+                                </p>
+                                <div class="access-cta">
+                                    <small style="color: var(--bg-color); font-weight: bold;">#里芋チーズ焼きおすすめ</small>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- スライド2 -->
+                        <div class="review-card">
+                            <div class="review-image">
+                                <img src="img/668.jpg" alt="アンケート2">
+                            </div>
+                            <div class="review-body">
+
+                                <span class="badge-oval accent">宮崎市在住 戸越さま</span>
+
+                                <h3>「sizenのファンだからです。<br>すべてがパーフェクトでした！」</h3>
+
+                                <p>
+                                    <strong>【sizenへの想い】</strong><br>
+                                    しばらく来ないと禁断症状が出てしまうほど大好きです。
+                                </p>
+
+                                <p>
+                                    <strong>【プロの仕事に感動】</strong><br>
+                                    料理の味やタイミングはもちろん、食材に向き合うシェフの真剣なまなざしやスタッフの気さくな笑顔。すべてに魂がこもっていました。
+                                </p>
+
+                                <p>
+                                    「パンの販売」を熱望しています！帰り道に買いたいファンがたくさんいるはずです♥
+                                </p>
+
+                                <div class="access-cta">
+                                    <small style="color: var(--bg-color); font-weight: bold;">#パン販売希望 #sizenファン</small>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            </div>
+            <div class="review-card">
+                <div class="review-image">
+                    <img src="img/976.jpg" alt="アンケート3">
+                </div>
+                <div class="review-body">
+                    <span class="badge-oval accent">宮崎市在住 森本さま</span>
+
+                    <h3>「野菜もおいしく、<br>体の中から元気になれそうです。」</h3>
+
+                    <p>
+                        <strong>【季節の恵みと家族の時間】</strong><br>
+                        夏の来店から季節が変わり、久しぶりに家族揃って伺いました。いつも気持ちよく過ごせる、私たちの大切な場所です。
+                    </p>
+
+                    <p>
+                        <strong>【初めてのチョウザメに感動】</strong><br>
+                        チョウザメや鮭のカマなど、驚きのあるお料理ばかり。特に<strong>「いつものスープ」</strong>の安心する美味しさには癒されます。
+                    </p>
+
+                    <div class="access-cta">
+                        <p style="color: var(--bg-color); font-weight: bold; font-size: 0.9rem;">
+                            #心身のデトックス #家族のお気に入り #旬を味わう
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+
+            <div class="access-cta">
+                <a href="#" class="btn-reservation">もっと見る</a>
+            </div>
+        </section>
+        </div>
+        </div>
+        </section>
+        <div class="menu-gradient menu-gradient-bottom"></div>
+    </main>
+    <footer class="wrapper footer">
+        <section id="footer">
+            <div class="footer-content">
+                <div class="sns-icon">
+                    <a class="sns-icon-link" href="https://www.instagram.com/organic_restaurant_sizen/"><img
+                            src="img/Instagram_Glyph_White.svg" alt="Instagram"></a>
+                    <a class="sns-icon-link" href="https://www.facebook.com/Organic.Restaurant.sizen#"><img
+                            src="img/Facebook_Logo_Secondary.png" alt="Facebook"></a>
+                    <a class="sns-icon-link" href="https://x.com/sizen_organic"><img src="img/logo-white.png"
+                            alt="Twitter"></a>
+                    <a class="sns-icon-link" href="https://organicsizen.thebase.in/"><img
+                            src="img/base_logo_vertical_white.png" alt="base"></a>
+                </div>
+                <p>© 2025 SIZEN. All rights reserved.</p>
+            </div>
+
+        </section>
+    </footer>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

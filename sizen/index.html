@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <!-- googleが自動で生成してくれるため書いても反映されない。 -->
-    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
+    <meta name="description" content="宮崎県おいしいレストラン 宮崎県のオーガニックレストランsizen。新鮮な食材と自然な味わいを追求した食事の空間。">
     <!-- レスポンシブ対応するときは絶対にいる -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/favicon.ico">
+    <!-- goggleフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Shippori+Mincho&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
     <!-- リセットCSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"> -->
@@ -44,12 +48,12 @@
                 <div class='menu-button'></div>
             </label>
             <ul class="menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#access">Access</a></li>
-                <li><a href="#farmer">Producer</a></li>
-                <li><a href="#sub">Review</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="access.html">Access</a></li>
+                <li><a href="producer.html">Producer</a></li>
+                <li><a href="review.html">Review</a></li>
+                <li><a href="blog.html">Blog</a></li>
             </ul>
         </section>
     </header>
@@ -76,7 +80,7 @@
                                 自然のエネルギーに満ちたこの場所で、<br class="br">
                                 農家さんが命を吹き込んだ食材を、その物語とともに味わってください。</p>
                             <p>化学調味料は一切使いません。<br class="br">
-                                20種類の料理と、一杯ずつ淹れる自家製の薬草茶。<br>
+                                20種類の料理と、一杯ずつ淹れる自家製の薬草茶。<br class="br">
                                 「ああ、生きてるっていいな」<br>
                                 翌朝、体の軽さに気づいたとき、あなたは本当の自然を知るはずです。
                             </p>
@@ -94,7 +98,7 @@
             <div class="wrapper">
                 <div class="menu-content">
                     <h1 class="content-title">メニュー</h1>
-                    <p class="text-deco">科学調味料・添加物は使用しない<br>有機・無農薬の食材が中心のオーガニック料理</p>
+                    <p class="#">科学調味料・添加物は使用しない<br>有機・無農薬の食材が中心のオーガニック料理</p>
                     <section id="menu-item">
                         <div class="menu-item glid-container">
                             <div class="item-1">
@@ -134,9 +138,11 @@
                                     <h3>手作り油みそ　4種類</h3>
                                     <p>昔ながらの製法で焦げ付かないように<wbr />じっくりとかき混ぜて煮詰めた手づくりみそです。</p>
                                     <p>値段：<strong>230g〜250g　500円（税別）</strong></p>
-                                    <a class="button-link" href="#">
-                                        <h3>詳細を見る</h3>
-                                    </a>
+                                    <div class="access-cta">
+                                        <a class="btn-reservation" href="#">
+                                            <h3>詳細を見る</h3>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="review-card">
@@ -147,9 +153,11 @@
                                     <h3>生ドレッシング　7種類</h3>
                                     <p>新鮮な野菜とフレッシュなハーブを<wbr />使用したドレッシングです。</p>
                                     <p>値段：<strong>100g　600円（税別）</strong></p>
-                                    <a class="button-link" href="#">
-                                        <h3>詳細を見る</h3>
-                                    </a>
+                                    <div class="access-cta">
+                                        <a class="btn-reservation" href="#">
+                                            <h3>詳細を見る</h3>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -288,7 +296,7 @@
             <h1 class="content-title">お客さまの声</h1>
                         <div class="review-card">
                             <div class="review-image">
-                                <img src="img/anketo1.png" alt="アンケート1">
+                                <img src="img/633.jpg" alt="アンケート1">
                             </div>
                             <div class="review-body">
                                 <span class="badge-oval">宮崎市 星野さま</span>
@@ -299,7 +307,7 @@
                     <!-- スライド2 -->
                         <div class="review-card">
                             <div class="review-image">
-                                <img src="img/anketo2.png" alt="アンケート2">
+                                <img src="img/668.jpg" alt="アンケート2">
                             </div>
                             <div class="review-body">
                                 <span class="badge-oval">戸路さま</span>
@@ -309,7 +317,7 @@
                         </div>                    <!-- スライド3 -->
                         <div class="review-card">
                             <div class="review-image">
-                                <img src="img/anketo3.png" alt="アンケート3">
+                                <img src="img/976.jpg" alt="アンケート3">
                             </div>
                             <div class="review-body">
                                 <span class="badge-oval">久保田さま</span>
@@ -326,7 +334,7 @@
     <h1 class="content-title">ブログ</h1>
     <div class="blog-content cstm-box-offset">
         <div class="blog-card">
-            <h3 class="t_bg1 mb15"><a href="https://sizen-organic.com/archives/937" title="祝！20歳になりました"> 祝！20歳になりました</a>
+            <h3 class="t_bg1"><a href="blog.html" title="祝！20歳になりました"> 祝！20歳になりました</a>
             </h3>
             <p class="mb15 text_r">『 2025年10月2日 』</p>
             <p class="blog-card__excerpt">
@@ -339,7 +347,7 @@
             <p class="text_r"><a class="more-link ml20" href="https://sizen-organic.com/archives/937">&raquo; 続きを読む</a></p>
         </div>
             </div class="access-cta">
-                    <a href="#">
+                    <a href="blog.html">
                         <h3 class="btn-reservation">ブログを見る</h3>
                     </a>
             </div>
