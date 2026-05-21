@@ -92,7 +92,7 @@ h1 {
     /* 画面が960px以下も自動的にアジャストする */
     /* max-width: 960px; */
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 50px 20px;
     text-align: center;
     box-sizing: border-box;
 }
@@ -264,6 +264,12 @@ aboutページ
   margin: 100px 0;
 }
 
+.deco-about {
+  margin: 0 auto;
+  color: var(--text-color);
+  text-align: left;
+  max-width: 1000px;
+}
 
 /* 
 ---------------------------------
@@ -638,6 +644,10 @@ aboutページ
   height: 100%; 
   z-index: -1; 
 }
+
+/* .padding-bg {
+  padding: 100px 0;
+} */
 
 /* ボックス内の段落 */
 .cstm-box-offset p {
