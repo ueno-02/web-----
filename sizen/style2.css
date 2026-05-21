@@ -92,7 +92,7 @@ h1 {
     /* 画面が960px以下も自動的にアジャストする */
     /* max-width: 960px; */
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 0 20px;
     text-align: center;
     box-sizing: border-box;
 }
@@ -261,24 +261,9 @@ aboutページ
 }
 
 .about-text p {
-  margin: 20px 0;
+  margin: 100px 0;
 }
 
-.deco-about {
-  margin: 0 auto;
-  color: var(--text-color);
-  text-align: left;
-  max-width: 1000px;
-  text-shadow: none;
-}
-
-.about-text-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  margin: 0 auto;
-}
 
 /* 
 ---------------------------------
@@ -331,13 +316,12 @@ aboutページ
   overflow-wrap: anywhere;
 }
 .menu-item p {
-  margin: 0 20px;
+  margin: 0 auto;
   line-height: 1.5;
   overflow-wrap: anywhere;
 }
 
 .menu-item img {
-  width: 100%;
   margin: 80px auto 10px auto;
 }
 
@@ -365,7 +349,7 @@ aboutページ
 
 .review-body .access-cta h3 {
   margin: 0 auto;
-  /* color: var(--bg-color); */
+  color: var(--bg-color);
   padding: 0;
 }
 /*
@@ -454,7 +438,7 @@ aboutページ
 }
 
 .badge-circle img {
-  width: 100%;
+  /* width: 180px; */
   height: auto;
 }
 
@@ -479,18 +463,13 @@ aboutページ
 /* 右側に配置するバッジ */
 .side-badges {
     margin-left: auto;
-    margin-bottom: 50px;
 }
+
 /* 詳細テキスト */
 .info-details .time {
     font-weight: bold;
     font-size: 1rem;
     margin-bottom: 4px;
-    /* padding-top: 55px; */
-}
-
-.padding-top-p {
-    padding-top: 55px;
 }
 
 .info-details .price-summary {
@@ -546,14 +525,11 @@ aboutページ
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 .text-indent {
-  margin: 15px 0;
-  width: 100%;
+  margin: 100px 0;
 }
-
 
 
 /*
@@ -662,10 +638,6 @@ aboutページ
   height: 100%; 
   z-index: -1; 
 }
-
-/* .padding-bg {
-  padding: 100px 0;
-} */
 
 /* ボックス内の段落 */
 .cstm-box-offset p {
@@ -834,7 +806,7 @@ aboutページ
    ============================================= */
 @media screen and (min-width: 600px) {
   .wrapper {
-    max-width: 800px;
+    max-width: 720px;
     /* padding: 0 40px; */
   }
 
@@ -861,7 +833,7 @@ aboutページ
   }
 
   .content-title, .store-name, .access-cta, .btn-reservation {
-    grid-column: 1 / -1;
+    grid-column: 1 / -1; /* 横一杯 */
     text-align: center;
   }
 
@@ -885,12 +857,12 @@ aboutページ
   }
 
   .grid-container {
-  justify-content: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 8px;
   width: 100%;
+  height: 500px;
 }
 
 .item-1 { grid-area: 1 / 1 / 2 / 2; }
@@ -899,9 +871,7 @@ aboutページ
 .item-4 { grid-area: 2 / 1 / 3 / 2; }
 .item-5 { grid-area: 2 / 2 / 3 / 3; }
 .item-6 { grid-area: 2 / 3 / 3 / 4; }
-.item-7 { grid-area: 3 / 1 / 4 / 2; }
-.item-8 { grid-area: 3 / 2 / 4 / 3; }
-.item-9 { grid-area: 3 / 3 / 4 / 4; }}
+}
 /* 
 -------------------------------------
    PC用 (960px以上) 
