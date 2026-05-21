@@ -349,7 +349,7 @@ aboutページ
 
 .review-body .access-cta h3 {
   margin: 0 auto;
-  color: var(--bg-color);
+  /* color: var(--bg-color); */
   padding: 0;
 }
 /*
